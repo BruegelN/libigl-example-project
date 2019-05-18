@@ -5,8 +5,8 @@ before_script:
   # Install build dependencies
   - apt-get update
   - apt-get -y install cmake
-  - apt-get -y xorg-dev
-  - apt-get -y libglu1-mesa-dev
+  - apt-get -y install xorg-dev
+  - apt-get -y install libglu1-mesa-dev
 
 myapp:
   # Build the application
