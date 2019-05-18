@@ -1,4 +1,4 @@
-# Use the official gcc image
+# Use the official gcc image
 image: gcc
 
 before_script:
