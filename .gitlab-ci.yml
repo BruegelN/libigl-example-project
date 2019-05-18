@@ -1,0 +1,19 @@
+# Use the official gcc image
+image: gcc
+
+before_script:
+  # Install build dependencies
+  - apt-get update
+  - apt-get -y install cmake
+  - apt-get -y xorg-dev
+  - apt-get -y libglu1-mesa-dev
+
+myapp:
+  # Build the application
+  stage: build
+  script:
+    - git clone --recursive --depth=3 https://github.com/libigl/libigl.git
+    - mkdir build
+    - cd build
+    - cmake ../
+    - make
