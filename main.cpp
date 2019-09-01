@@ -6,17 +6,17 @@ int main(int argc, char *argv[])
 
 
   
-  std::vector<std::vector > V;
-  std::vector<std::vector > F;
-  std::vector<std::vector > N;
+  std::vector<std::vector<double> > V;
+  std::vector<std::vector<int> > F;
+  std::vector<std::vector<double> > N;
   bool success = igl::readSTL("File_path.stl",V,F,N);
   Eigen::MatrixXd V_1(V.size(),3);
   Eigen::MatrixXi F_1(F.size(),3);
   Eigen::MatrixXd N_1(N.size(),3);
   Eigen::MatrixXd V_1_f(1,3);
   Eigen::MatrixXd N_1_f(1,3);
-  V_1_f(0,0)=rNode.X(); V_1_f(0,1)=rNode.Y(); V_1_f(0,2)=rNode.Z();
-  N_1_f(0,0)=rRayVector[0]; N_1_f(0,1)=rRayVector[1]; N_1_f(0,2)=rRayVector[2];
+  //V_1_f(0,0)=rNode.X(); V_1_f(0,1)=rNode.Y(); V_1_f(0,2)=rNode.Z();
+  //N_1_f(0,0)=rRayVector[0]; N_1_f(0,1)=rRayVector[1]; N_1_f(0,2)=rRayVector[2];
 
 for (int i=0; i<V.size(); ++i){
 
