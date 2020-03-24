@@ -20,7 +20,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, macos-latest]
-        config: [Release]
+        config: [Release, Debug]
         static: [ON, OFF]
         libigl_branch: [master, dev]
         include:
@@ -95,7 +95,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        config: [Release]
+        config: [Release, Debug]
         static: [ON, OFF]
         libigl_branch: [master, dev]
     steps:
