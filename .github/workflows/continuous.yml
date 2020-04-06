@@ -3,6 +3,8 @@ name: Build
 on:
   push: {}
   pull_request: {}
+  repository_dispatch:
+    types: [trigger-example-project]
 
 env:
   CTEST_OUTPUT_ON_FAILURE: ON
@@ -20,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, macos-latest]
-        config: [Release, Debug]
+        config: [Release]
         static: [ON, OFF]
         libigl_branch: [master, dev]
         include:
@@ -95,7 +97,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        config: [Release, Debug]
+        config: [Release]
         static: [ON, OFF]
         libigl_branch: [master, dev]
     steps:
