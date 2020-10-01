@@ -22,7 +22,7 @@ jobs:
         os: [ubuntu-18.04, macos-latest]
         config: [Release]
         static: [ON, OFF]
-        libigl_branch: [master, dev]
+        libigl_branch: [master, stable]
         include:
           - os: macos-latest
             name: macOS
@@ -97,7 +97,7 @@ jobs:
       matrix:
         config: [Release]
         static: [ON, OFF]
-        libigl_branch: [master, dev]
+        libigl_branch: [master, stable]
     steps:
       - name: Checkout libigl-example-project
         uses: actions/checkout@v2
